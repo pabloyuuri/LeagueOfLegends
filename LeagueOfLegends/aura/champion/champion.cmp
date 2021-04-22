@@ -1,0 +1,62 @@
+<aura:component>
+    <aura:attribute name="champion" type="Object"/>
+    
+    <div class="card" style="width:308px; height:560px;">
+        <lightning:card >
+            <div>
+                <img aura:id="imagem-carrega " style="width:308px; height:560px" src="{!'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/'+v.champion.id+'_0.jpg'}"/>
+            </div>
+            <div class="content" style="position: absolute;
+    /* position: relative; */
+    /* bottom: 154px; */
+    top: 65%;
+    left: 12%;
+    display: block;
+    width: 75%;
+    text-align: center;">
+                <span class="texto;">
+                    <h1 class="nome-champion" style="font-size: 1.3rem;font-weight: bold; line-height: 1.2;">
+                        {!v.champion.id}
+                    </h1>
+                    <br/>
+                    <h2 class="atributos" style="font-style:italic;">
+                        <!-- Atributo de Attack -->
+                        
+                        <div style="line-height: 1.0 !important;">
+                            <h2 class="atributo-attack">Attack</h2>
+                            <div class="slds-progress-bar slds-progress-bar_circular"  aria-valuemin="0%" aria-valuemax="10%" aria-valuenow="{!v.champion.info.attack+'0%'}"  role="progressbar">
+                                <span class="slds-progress-bar__value slds-progress-bar__value_success attack" style="{!'width:'+v.champion.info.attack+'0%;' + 'background-color:red;'}"></span>
+                                    
+                            </div><br/>
+                        </div>
+
+                        <!-- Atributo de Defense -->
+                        
+                        <div>
+                            <h2 class="atributo-defense">Defense</h2>
+                            <div class="slds-progress-bar slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="10" aria-valuenow="{!v.champion.info.defense+'0%'}"   role="progressbar">
+                                <span class="slds-progress-bar__value slds-progress-bar__value_success defense" style="{!'width:'+v.champion.info.defense+'0%;' + 'background-color:#f69f00;'}"></span>
+                            </div>
+                        </div><br/>
+
+                        <!-- Atrivuto de Magic-->
+                        <div>
+                            <h2 class="atributo-magic">Magic</h2>
+                            <div class="slds-progress-bar slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="10" aria-valuenow="{!v.champion.info.magic+'0%'}"   role="progressbar">                                
+                                <span class="slds-progress-bar__value  magic" style="{!'width:'+v.champion.info.magic+'0%;' + 'background-color:blue;'}"></span>
+                            </div>
+                        </div><br/>
+
+                        <!-- Atributo de Difficulty-->
+                        <div>
+                            <h2 class="atributo-difficulty">Difficulty</h2>
+                            <div class="slds-progress-bar slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="10" aria-valuenow="{!v.champion.info.difficulty+'0%'}"   role="progressbar">                                
+                                <span class="slds-progress-bar__value slds-progress-bar__value_success difficulty" style="{!'width:'+v.champion.info.difficulty+'0%;' + 'background-color:#881b8e;'}"></span>bf28cc
+                            </div>
+                        </div><br/>  
+                    </h2>                       
+                </span>
+            </div>
+        </lightning:card>
+    </div> 
+</aura:component>

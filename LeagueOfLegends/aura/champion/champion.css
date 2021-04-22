@@ -1,0 +1,58 @@
+.THIS .text {
+    display:none;
+}
+.THIS img:hover .texto {
+    display:block;
+}
+
+.THIS .nome-champion {
+    margin-top: -46% !important;
+    text-align: center;
+    color:#ffffff;
+}
+
+.THIS .slds-progress-bar_circular {
+    width:50% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    text-decoration-color: #ffffff;
+}
+
+.THIS .nome-atributo {
+    text-align: center !important;
+    color:#ffffff;
+}
+
+.THIS .atributo-attack {
+    color: white;
+    text-align: center;
+    line-height: 1;
+    top: 1%;
+    position: relative;
+}
+.THIS .atributo-defense {
+    
+    color: white;
+    text-align: center;
+    line-height: 1;
+    margin-top: -4%;
+
+}
+
+.THIS .atributo-magic {
+    
+    color: white;
+    text-align: center;
+    line-height: 1;
+    margin-top: -6%;
+
+}
+
+.THIS .atributo-difficulty {
+    
+    color: white;
+    text-align: center;
+    line-height: 1;
+    margin-top:-5%;
+}

@@ -1,0 +1,50 @@
+<aura:component controller="LEXChampions" implements="force:appHostable">
+    <aura:attribute name="champions" type="List" /> <!-- List para guardar objetos -->
+    <aura:handler name="init" action="{!c.init}" value="{!this}" /> <!-- 1. Chamando Evento c.init do controller quando iniciar a página-->
+    <aura:attribute name="loading" type="boolean" default="true" />
+    <table class="header">
+        <table class="header-bar">
+            <table class="title-bar">
+                <th style="font-style:italic;  font-size:50px; color:#c38f2c; text-align:center; ">League Of Legends</th>
+            </table>
+
+
+            <table class="bar-content">
+                <td class="bar-imgs">
+                    <nav>
+                        <span><img class="headerImgRiot" src="https://static.developer.riotgames.com/img/logo.png"/></span> |
+                        <span><img class="headerImgLoL" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/signup/pt_BR/c90bd494d0d5a9eecb710c7895776bb332a0e51a/assets/pt_BR/assets/lol-logo.png"/></span>
+                    </nav>
+                </td>
+                <td class=" slds-tabs_default__item slds-is-active bar-content-item"><a style="text-decoration: none; color:aliceblue;" href="https://pabloyuri-dev-ed.lightning.force.com/c/leagueoflegendsapp.app">ESCOLHA SEU CHAMPION</a></td>
+                <td class=" slds-tabs_default__item slds-is-active bar-content-item"><a style="text-decoration: none; color:aliceblue;" href="">ESCOLHA SUA LANE</a></td>
+                <td class="slds-tabs_default__item slds-is-active bar-content-item"><a style="text-decoration: none; color:aliceblue;" href="">COMO JOGAR</a></td>
+                <td class=" slds-tabs_default__item slds-is-active bar-content-item"><a style="text-decoration: none; color:aliceblue;" href="https://auth.riotgames.com/login">INICIAR SESSÃO</a></td>
+                <td class="jogue-agora"><button class="slds-button slds-button_brand"><a style="text-decoration: none;" href="https://signup.br.leagueoflegends.com/pt/signup/index#/">JOGUE AGORA</a></button></td>
+            </table>
+        </table>
+    </table>
+    
+	<aura:if isTrue="{!v.loading}">
+		<lightning:card class="loading-card">
+            <aura:set attribute="title">
+            	
+            </aura:set>
+            <lightning:spinner size="medium" />
+        </lightning:card>
+    </aura:if>
+
+    <table class="body">
+        <div class="slds-grid slds-wrap slds-grid_align-center" style="margin-top: 2% !important;">
+            <aura:iteration var="champion" items="{!v.champions}">
+                <div class="slds-col slds-size_1-of-10">
+                    <c:champion champion="{!champion}" />                    
+                </div>
+            </aura:iteration>    
+        </div>
+    </table>
+    <table class="footer" style="background-color: black !important; height:100%;">
+    </table>
+    
+
+</aura:component>

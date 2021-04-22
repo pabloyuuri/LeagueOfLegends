@@ -1,0 +1,39 @@
+.THIS .header {
+    width: 100%;
+    height:100px;
+}
+.THIS.header .header-bar{
+    background-color: black;   
+    position: fixed;
+    z-index: 10000;
+
+}
+.THIS.header .header-bar .title-bar th {
+    position:relative;
+    margin-top:10%;
+}
+.THIS img.headerImgRiot {
+    width:50px;
+}
+.THIS img.headerImgLoL {
+    width:70px;
+    height:30.800px;
+}
+
+
+
+.THIS.loading-card {
+    min-height: 100vh;
+}
+
+
+
+.THIS.body{
+	margin-top:200px;
+    background-color:rgb(255, 255, 255);
+}
+
+
+.THIS.body .slds-grid .slds-wrap {
+    margin-top: 1% !important;
+}
